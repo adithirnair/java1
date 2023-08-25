@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methods IN Javascript</title>
+</head>
+<body>
+<div id="output"></div>
+<script>
+  // Function to display text on the webpage
+  function displayText(text) {
+    const outputDiv = document.getElementById('output');
+    const paragraph = document.createElement('p');
+    paragraph.textContent = text;
+    outputDiv.appendChild(paragraph);
+  }
+
+  // String methods
+  const message = '  This is string method   ';
+  displayText(message.trim());
+  displayText(message.toLowerCase());
+  displayText(message.includes('Method'));
+  displayText(message.charAt(10));
+  displayText(message.replace('String', 'SM'));
+
+  // Number methods
+  const randomNumber = Math.random();
+  displayText(randomNumber);
+  displayText(randomNumber.toFixed(2));
+  displayText(parseInt('56'));
+  displayText(parseFloat('3.14'));
+  displayText(Number.isNaN('Namaskar'));
+
+  // Array methods
+  const animals = ['lion', 'tiger', 'cat', 'dog', 'monkey'];
+  displayText(animals.length);
+  displayText(animals.reverse());
+  displayText(animals.indexOf('monkey'));
+  displayText(animals.join(' # '));
+  displayText(animals.slice(1, 4));
+
+  // Date methods
+  const now = new Date();
+  displayText(now.toDateString());
+  displayText(now.getMonth());
+  displayText(now.getHours());
+  displayText(now.getMinutes());
+  displayText(now.getSeconds());
+
+  // Function methods
+  function square(num) {
+    return num * num;
+  }
+  displayText(square(5));
+</script>
+</body>
+</html>
+
+
